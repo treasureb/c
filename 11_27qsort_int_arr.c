@@ -10,7 +10,7 @@ int main()
 {
 	int i=0;
 	int n=0;
-	float *arr;
+	int *arr;
 	arr=(int*)malloc(n*sizeof(int));
 	printf("Please Enter Number:");
 	scanf("%d",&n);
