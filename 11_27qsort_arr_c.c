@@ -14,20 +14,9 @@ static void stringShow(char* arr[],int len)
 	}
 	printf("\n");
 }
-	static void stringCmp(void *x,void *y)
-	{
-		char *p=(char *)x;
-		char *q=(char *)y;
-		int m=strlen(p);
-		int n=strlen(q);
-		if(m!=n)
-		{
-			return (*p-*q);
-		}
-		else
-		{
-		return strcmp(*((char **)x),*((char **)y));
-		}
+static void stringCmp(void *x,void *y)
+{
+	return strcmp(*((char **)x),*((char **)y));		
 }
 
 void stringSort(char *arr[],int len)
