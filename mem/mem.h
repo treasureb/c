@@ -24,7 +24,7 @@ void* memmove(void* dest,const void* src,size_t length){
     char* psrc = (char*)src;
     assert(dest);
     assert(src);
-    if(pdst > psrc){//从后往前 空间减少 直到为0
+    if(pdst > psrc){//src在dst的前面,这样从前赋值会破坏src本身后面的值
         while(length--)
             *(pdst+length) = *(psrc+length);
     }else{//从前拷贝
